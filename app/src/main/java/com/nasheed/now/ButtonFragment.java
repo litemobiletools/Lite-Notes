@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,8 @@ public class ButtonFragment extends Fragment {
     private DatabaseHelper databaseHelper;
     private FloatingActionButton fab;
 
+    private ImageView emptyviewId;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class ButtonFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         fab = view.findViewById(R.id.fab);
+        emptyviewId = view.findViewById(R.id.emptyviewId);
 
         databaseHelper = new DatabaseHelper(getActivity());
 
@@ -111,6 +115,15 @@ public class ButtonFragment extends Fragment {
                 itemList.add(new Item(id, name, date_Time));
             }
             cursor.close();
+
+            // Check if itemList is empty after processing the cursor
+            if (itemList.isEmpty()) {
+                emptyviewId.setVisibility(View.VISIBLE);
+            } else {
+                emptyviewId.setVisibility(View.GONE);
+            }
+        }else{
+            emptyviewId.setVisibility(View.VISIBLE);
         }
     }
 

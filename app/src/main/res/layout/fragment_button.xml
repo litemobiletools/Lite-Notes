@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".ButtonFragment">
 
     <TextView
@@ -17,7 +18,7 @@
         android:paddingLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LiteNote"/>
+        android:text="@string/app_name"/>
 
     <!-- App Bar with title -->
 <!--    <androidx.appcompat.widget.Toolbar-->
@@ -30,6 +31,15 @@
 <!--        android:title="Items"-->
 <!--        android:titleTextColor="@android:color/white"-->
 <!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+    <!-- RecyclerView for displaying items -->
+    <ImageView
+        android:id="@+id/emptyviewId"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/empty"
+        android:visibility="gone"/>
 
     <!-- RecyclerView for displaying items -->
     <androidx.recyclerview.widget.RecyclerView
