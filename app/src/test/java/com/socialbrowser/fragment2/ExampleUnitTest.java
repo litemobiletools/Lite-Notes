@@ -1,4 +1,4 @@
-package com.litemobiletools.notes;
+package com.socialbrowser.fragment2;
 
 import org.junit.Test;
 
