@@ -1,4 +1,4 @@
-package com.socialbrowser.fragment2;
+package com.nasheed.now;
 
 import android.content.ContentValues;
 import android.content.Context;

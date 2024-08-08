@@ -1,4 +1,4 @@
-package com.socialbrowser.fragment2;
+package com.nasheed.now;
 
 import org.junit.Test;
 

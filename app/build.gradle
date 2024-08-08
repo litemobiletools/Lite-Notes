@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.socialbrowser.fragment2'
+    namespace 'com.nasheed.now'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.socialbrowser.fragment2"
+        applicationId "com.nasheed.now"
         minSdk 21
         targetSdk 34
         versionCode 1
