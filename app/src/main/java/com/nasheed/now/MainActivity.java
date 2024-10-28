@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Load the default fragment (ButtonFragment)
         if (savedInstanceState == null) {
-            loadFragment(new ButtonFragment());
+            loadFragment(new TitleFragment());
         }
     }
 

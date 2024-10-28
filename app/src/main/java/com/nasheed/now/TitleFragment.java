@@ -21,7 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ButtonFragment extends Fragment {
+public class TitleFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private MyAdapter adapter;
@@ -35,7 +35,7 @@ public class ButtonFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_button, container, false);
+        View view = inflater.inflate(R.layout.fragment_title, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
@@ -59,7 +59,7 @@ public class ButtonFragment extends Fragment {
                 // Handle the item click
 //                Toast.makeText(getActivity(), "Clicked: " + item.getName(), Toast.LENGTH_SHORT).show();
                 // Navigate to SimpleFragment
-                loadFragment(SimpleFragment.newInstance(item.getId()));
+                loadFragment(DetailsFragment.newInstance(item.getId()));
             }
         }, new MyAdapter.OnDeleteClickListener() {
             @Override
@@ -87,7 +87,7 @@ public class ButtonFragment extends Fragment {
                     //adapter.notifyDataSetChanged();
                     adapter.updateItemList(itemList);
                     // Navigate to SimpleFragment with the new item ID
-                    loadFragment(SimpleFragment.newInstance((int) newItemId));
+                    loadFragment(DetailsFragment.newInstance((int) newItemId));
                 } else {
                     Toast.makeText(getActivity(), "Error inserting item", Toast.LENGTH_SHORT).show();
                 }
