@@ -8,35 +8,9 @@
     android:weightSum="15">
 
     <LinearLayout
-        android:background="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="2">
-        <TextView
-            android:id="@+id/msave"
-            android:paddingLeft="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Auto Save..."
-            android:layout_weight="1"/>
-        <ImageButton
-            android:src="@drawable/undo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonUndo"
-            android:layout_weight="1"/>
-        <ImageButton
-            android:layout_height="wrap_content"
-            android:src="@drawable/redo"
-            android:layout_width="match_parent"
-            android:id="@+id/buttonRedo"
-            android:layout_weight="1"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="13"
+        android:layout_weight="14"
         android:orientation="vertical">
         <jp.wasabeef.richeditor.RichEditor
             android:paddingLeft="5dp"
@@ -53,8 +27,9 @@
     </LinearLayout>
 
     <HorizontalScrollView
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@android:color/black">
 
         <LinearLayout
@@ -304,55 +279,55 @@
                 android:contentDescription="@null"
                 android:src="@drawable/blockquote" />
 
-            <ImageButton
-                android:id="@+id/action_insert_image"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="4dp"
-                android:scaleType="centerInside"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/insert_image" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/action_insert_image"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/insert_image" />-->
 
-            <ImageButton
-                android:id="@+id/action_insert_audio"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="4dp"
-                android:scaleType="centerInside"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/music" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/action_insert_audio"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/music" />-->
 
-            <ImageButton
-                android:id="@+id/action_insert_video"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="4dp"
-                android:scaleType="centerInside"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/video" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/action_insert_video"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/video" />-->
 
-            <ImageButton
-                android:id="@+id/action_insert_youtube"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="4dp"
-                android:scaleType="centerInside"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/youtube" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/action_insert_youtube"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/youtube" />-->
 
-            <ImageButton
-                android:id="@+id/action_insert_link"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:padding="4dp"
-                android:scaleType="centerInside"
-                android:background="@null"
-                android:contentDescription="@null"
-                android:src="@drawable/insert_link" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/action_insert_link"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:background="@null"-->
+<!--                android:contentDescription="@null"-->
+<!--                android:src="@drawable/insert_link" />-->
 
             <ImageButton
                 android:id="@+id/action_insert_checkbox"

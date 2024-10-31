@@ -4,6 +4,7 @@ package com.nasheed.now;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,6 +107,14 @@ public class TitleFragment extends Fragment {
                 int id = cursor.getInt(cursor.getColumnIndex("id"));
                 @SuppressLint("Range")
                 String name = cursor.getString(cursor.getColumnIndex("name"));
+
+                // Convert HTML content to styled text
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    name = String.valueOf(Html.fromHtml(name, Html.FROM_HTML_MODE_LEGACY));
+                } else {
+                    name = String.valueOf(Html.fromHtml(name));
+                }
+
                 if(name.isEmpty()){
                     name = "Untitled";
                 }
